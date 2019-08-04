@@ -1,18 +1,19 @@
 // RXAction
+import { SET, INCREMENT, DECREMENT, CLEAR } from './types';
 export const counterIncrement = (param) => ({
-  type: 'INCREMENT'
+  type: INCREMENT
 })
 
 export const counterDecrement = (param) => ({
-  type: 'DECREMENT'
+  type: DECREMENT
 })
 
 export const counterClear = (param) => ({
-  type: 'CLEAR'
+  type: CLEAR
 })
  
 export const counterSet = (receivenumber) => ({
-  type: 'SET',
+  type: SET,
   payload: receivenumber
 })
 

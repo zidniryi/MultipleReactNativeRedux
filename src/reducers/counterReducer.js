@@ -1,15 +1,15 @@
 // rxReducer
-
+import { SET, INCREMENT, DECREMENT, CLEAR } from '../actions/types';
 export default (state = 0, action) => {
   switch (action.type) {
 
-  case 'INCREMENT':
+  case INCREMENT:
     return state +1
-  case 'DECREMENT':
+  case DECREMENT:
     return state -1
-  case 'CLEAR':
+  case CLEAR:
     return 0;
-  case 'SET':
+  case SET:
      return action.payload    
   default:
     return state

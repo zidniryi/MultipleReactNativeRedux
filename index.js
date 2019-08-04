@@ -4,10 +4,10 @@ import App from './src/App';
 import { name as appName } from './app.json';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import reducer from './src/reducers/counterReducer';
+import reducers from './src/reducers';
 
 //3 Membuat Store 
-const store = createStore(reducer)
+const store = createStore(reducers)
 const AppContainer = () => (
   <Provider store={store}>
     <App />

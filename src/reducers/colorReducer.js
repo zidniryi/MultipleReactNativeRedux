@@ -1,3 +1,4 @@
+import { COLOR_PRESSED } from '../actions/types';
 const initialState = {
     colorText: 'Merah',
     colorBool: false
@@ -7,7 +8,7 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
 
-  case typeName:
+  case COLOR_PRESSED:
     return { ...state, colorText:'Biru', colorBool:true };
 
   default:

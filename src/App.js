@@ -4,6 +4,7 @@ import { StyleSheet, Text, TextInput, View, Button } from "react-native";
 import { connect } from 'react-redux';
 import { counterIncrement, counterDecrement, counterClear, counterSet, helloAction, colorAction } from "./actions";
 import { ScrollView } from "react-native-gesture-handler";
+import Color from "./Color";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -40,12 +41,7 @@ class App extends Component {
         <Text>Did you press button === {pressButton.toString()}</Text>
         <Button title='Show The Magic' color='tomato' onPress={this.props.helloAction}/>
         </View>
-        <View>
-          <Text style={{color:colorBool?'blue':'red'}}>
-            {colorText}
-          </Text>
-          <Button title='Ajaib Warna' color='black' onPress={this.props.colorAction}/>
-        </View>
+        <Color />
       </View>
       </ScrollView>
     );

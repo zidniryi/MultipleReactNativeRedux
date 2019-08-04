@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, TextInput, View, Button } from "react-native";
 import { connect } from 'react-redux';
-import { counterIncrement, counterDecrement, counterClear, counterSet, helloAction, colorAction } from "./actions";
+import { counterIncrement, counterDecrement, counterClear, counterSet, helloAction } from "./actions";
 import { ScrollView } from "react-native-gesture-handler";
 import Color from "./Color";
 class App extends Component {
@@ -17,7 +17,6 @@ class App extends Component {
 
   render() {
     console.log(this.props.color)
-    const {colorText, colorBool} = this.props.color
     const {helloText, pressButton} = this.props.hello
     const { container, countViewStyle, welcome } = styles;
     return (
@@ -77,9 +76,8 @@ const styles = StyleSheet.create({
 const mapStateToProps = (state) => ({
   count: state.counter,
   hello: state.hello,
-  color: state.color
 });
 const mapDispatchToProps = (dispatch) => ({
 
 });
-export default connect(mapStateToProps, {counterIncrement, counterDecrement, counterClear, counterSet, helloAction, colorAction})(App)
+export default connect(mapStateToProps, {counterIncrement, counterDecrement, counterClear, counterSet, helloAction})(App)
